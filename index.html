@@ -9,10 +9,12 @@
   <!-- <link rel="icon" href="images/favicon.png" type="image/png"> -->
   <title>MIROBI IT Solutions</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Roboto', sans-serif;
       background: #f5f7fa;
       color: #333;
       transition: background 0.3s, color 0.3s;
@@ -49,6 +51,9 @@
       text-align: center;
       padding: 15px 0;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
       color: #ecf0f1;
@@ -58,10 +63,11 @@
       text-transform: uppercase;
       font-size: 1.1rem;
       letter-spacing: 1px;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
     nav a:hover {
       color: #3498db;
+      transform: scale(1.1);
     }
     .container {
       width: 90%;
@@ -69,11 +75,12 @@
       margin: 30px auto;
     }
     section {
-      background: #fff;
+      background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
       padding: 35px;
       border-radius: 12px;
       margin-bottom: 30px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-out;
     }
     body.dark-mode section { background: #34495e; }
     .team, .services {
@@ -150,10 +157,11 @@
       border-radius: 6px;
       cursor: pointer;
       font-size: 1.1rem;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
     form button:hover {
       background: #2980b9;
+      transform: scale(1.05);
     }
     iframe {
       width: 100%;
@@ -190,6 +198,15 @@
     }
     footer p {
       font-size: 1rem;
+    }
+    /* Animation for fade-in effect */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -379,7 +396,7 @@
         "services-heading": "আমাদের সেবা",
         "web-design-title": "ওয়েব ডিজাইন",
         "web-design-description": "আমরা আধুনিক, প্রতিক্রিয়া-সক্ষম এবং ব্যবহারকারী-বান্ধব ওয়েবসাইট তৈরি করি যা কেবল সুন্দর দেখায় না, তবে ব্যবসায়িক লক্ষ্য অর্জনের জন্য কার্যকরভাবে ডিজাইন করা হয়।",
-        "data-entry-title": "ডাটা এন্ট্রি",
+        "data-entry-title": "ডেটা এন্ট্রি",
         "data-entry-description": "আমাদের সঠিক এবং কার্যকরী ডেটা এন্ট্রি সমাধানগুলি সমস্ত ধরণের শিল্পের সহায়ক, আপনার ব্যবসার তথ্য সর্বদা সুশৃঙ্খল, প্রবেশযোগ্য এবং নিরাপদ রাখে।",
         "bpo-title": "BPO",
         "bpo-description": "আমরা নির্ভরযোগ্য আউটসোর্সিং পরিষেবাগুলি সরবরাহ করি একটি দক্ষ কর্মী বাহিনীর সাথে, যার ফলে আপনি অপারেশনাল খরচ কমাতে পারবেন এবং উচ্চ পরিষেবা মান বজায় রাখবেন।",
