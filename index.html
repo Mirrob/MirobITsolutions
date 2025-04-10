@@ -3,129 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- Favicon -->
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- If using PNG format -->
   <!-- <link rel="icon" href="images/favicon.png" type="image/png"> -->
-  <title>MIROB IT Solutions</title>
+  <title>MIROBI IT Solutions</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f4f8;
+      background: #f5f7fa;
       color: #333;
       transition: background 0.3s, color 0.3s;
     }
-    body.dark-mode { background: #1e1e2f; color: #f0f0f0; }
+    body.dark-mode { background: #2c3e50; color: #ecf0f1; }
     header {
-      background: linear-gradient(135deg, #0052cc, #00b4d8);
+      background: linear-gradient(135deg, #3498db, #8e44ad);
       color: white;
-      padding: 40px 0;
+      padding: 60px 0;
       text-align: center;
+      border-bottom: 4px solid #8e44ad;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     }
     header img {
-      max-width: 150px; /* Adjusted logo size to fit better */
+      max-width: 160px;
       height: auto;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    header p {
+      font-size: 1.1rem;
+      font-weight: 400;
       margin-bottom: 20px;
     }
     nav {
-      background: #003366;
+      background: #2c3e50;
       text-align: center;
-      padding: 10px 0;
+      padding: 15px 0;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     }
     nav a {
-      color: #fff;
+      color: #ecf0f1;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 20px;
       font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
     }
-    nav a:hover { color: #00b4d8; }
-    .container { width: 90%; max-width: 1200px; margin: 20px auto; }
+    nav a:hover {
+      color: #3498db;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
     section {
       background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 35px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     }
-    body.dark-mode section { background: #2e2e42; }
+    body.dark-mode section { background: #34495e; }
     .team, .services {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-    }
-    .team.vertical {
-      flex-direction: column;
-      align-items: center;
+      gap: 30px;
     }
     .team-member, .service-box {
-      width: 250px;
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 8px;
+      width: 260px;
+      background: #ecf0f1;
+      padding: 20px;
+      border-radius: 12px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .team-member:hover { transform: translateY(-5px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-    body.dark-mode .team-member, body.dark-mode .service-box { background: #3a3a52; }
+    .team-member:hover, .service-box:hover { 
+      transform: translateY(-10px); 
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); 
+    }
+    body.dark-mode .team-member, body.dark-mode .service-box { background: #7f8c8d; }
     .team-member img, .service-box img {
       width: 100%;
-      border-radius: 6px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
     }
-    .team-member h4, .service-box h3 { margin-top: 10px; color: #0052cc; }
-    .social-icons { margin-top: 10px; }
+    .team-member img:hover, .service-box img:hover {
+      transform: scale(1.05);
+    }
+    .team-member h4, .service-box h3 { 
+      margin-top: 12px; 
+      color: #3498db;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .team-member p, .service-box p {
+      font-size: 1rem;
+      color: #666;
+    }
     .social-icons a {
-      margin: 0 5px;
+      margin: 0 8px;
       text-decoration: none;
-      font-size: 18px;
-      color: #0052cc;
+      font-size: 22px;
+      color: #3498db;
+      transition: color 0.3s ease;
     }
-    .social-icons a:hover { color: #00b4d8; }
-    form { display: flex; flex-direction: column; }
-    form label { margin: 10px 0 5px; }
+    .social-icons a:hover {
+      color: #8e44ad;
+    }
+    form { 
+      display: flex; 
+      flex-direction: column; 
+      margin-top: 25px; 
+    }
+    form label { 
+      margin: 12px 0 6px; 
+      font-weight: bold; 
+      color: #333;
+    }
     form input, form textarea {
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-bottom: 20px;
     }
     form button {
-      margin-top: 15px;
-      padding: 10px;
-      background: #0052cc;
+      padding: 12px;
+      background: #3498db;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
     }
-    form button:hover { background: #003366; }
+    form button:hover {
+      background: #2980b9;
+    }
     iframe {
       width: 100%;
-      height: 300px;
+      height: 350px;
       border: 0;
       border-radius: 8px;
-      margin-top: 15px;
+      margin-top: 20px;
     }
     .lang-toggle, .theme-toggle {
-      margin-top: 20px;
+      margin-top: 30px;
       text-align: center;
     }
     .lang-toggle button, .theme-toggle button {
-      background: #00b4d8;
+      background: #3498db;
       border: none;
-      padding: 8px 16px;
-      margin: 0 5px;
+      padding: 12px 20px;
+      margin: 0 15px;
       color: white;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+    }
+    .lang-toggle button:hover, .theme-toggle button:hover {
+      background: #2980b9;
+    }
+    footer {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 50px;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    }
+    footer p {
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="MIROB IT Solutions Logo"> <!-- Your logo file -->
+    <img src="images/logo.png" alt="MIROBI IT Solutions Logo"> <!-- Your logo file -->
     <h1 id="site-title">MIROB IT Solutions</h1>
     <p id="site-description">Empowering Businesses with Innovative IT Services</p>
   </header>
@@ -137,14 +207,14 @@
   </nav>
   <div class="container">
     <section id="about">
-  <h2 id="about-heading">About Us</h2>
-  <p id="about-description" style="text-align: justify;">
-    <strong>MIROBI Solutions</strong> is a dynamic IT service company founded by 
-    <strong>Md Robiul Islam</strong> and <strong>Mir Abdullah Momin</strong>, driven by a shared vision to empower businesses through 
-    innovative and cost-effective technology solutions. With a strong understanding of the digital landscape, our mission is to deliver 
-    impactful, scalable, and affordable IT services that help businesses grow, streamline operations, and remain competitive in a rapidly evolving market.
-  </p>
-</section>
+      <h2 id="about-heading">About Us</h2>
+      <p id="about-description" style="text-align: justify;">
+        <strong>MIROB Solutions</strong> is a dynamic IT service company founded by 
+        <strong>Md Robiul Islam</strong> and <strong>Mir Abdullah Momin</strong>, driven by a shared vision to empower businesses through 
+        innovative and cost-effective technology solutions. With a strong understanding of the digital landscape, our mission is to deliver 
+        impactful, scalable, and affordable IT services that help businesses grow, streamline operations, and remain competitive in a rapidly evolving market.
+      </p>
+    </section>
     <section id="services">
       <h2 id="services-heading">Our Services</h2>
       <div class="services">
@@ -197,7 +267,7 @@
     <!-- Our Team Section -->
     <section id="team-members">
       <h2 id="team-members-heading">Our Team</h2>
-      <div class="team vertical">
+      <div class="team">
         <div class="team-member">
           <img src="images/member1.jpg" alt="Team Member 1">
           <h4 id="member1-name">Suhin Ahmad Rubel</h4>
@@ -227,7 +297,7 @@
         </div>
         <div class="team-member">
           <img src="images/member4.jpg" alt="Team Member 4">
-          <h4 id="member4-name">Ehsan Kabir Abir </h4>
+          <h4 id="member4-name">Ehsan Kabir Abir</h4>
           <p id="member4-position">Graphic Designer</p>
           <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -262,10 +332,9 @@
   </div>
 </section>
 
-
   </div>
   <footer>
-    <p>&copy; 2025 MIROBI IT Solutions. All rights reserved.</p>
+    <p>&copy; 2025 MIROB IT Solutions. All rights reserved.</p>
   </footer>
   <script>
     function toggleTheme() {
@@ -274,10 +343,10 @@
 
     var translations = {
       en: {
-        "site-title": "MIROBI IT Solutions",
+        "site-title": "MIROB IT Solutions",
         "site-description": "Empowering Businesses with Innovative IT Services",
         "about-heading": "About Us",
-        "about-description": "We are MIROBI IT Solutions, founded by Md Robiul Islam and Mir Abdullah Momin. Our mission is to deliver impactful and affordable IT services that help businesses grow and operate efficiently.",
+        "about-description": "MIROB Solutions is a dynamic IT service company founded by Md Robiul Islam and Mir Abdullah Momin, driven by a shared vision to empower businesses through innovative and cost-effective technology solutions. With a strong understanding of the digital landscape, our mission is to deliver impactful, scalable, and affordable IT services that help businesses grow, streamline operations, and remain competitive in a rapidly evolving market.",
         "services-heading": "Our Services",
         "web-design-title": "Web Design",
         "web-design-description": "We create modern, responsive, and user-friendly websites that not only look stunning but are strategically built to drive engagement and achieve business goals.",
@@ -298,19 +367,19 @@
         "member2-position": "MIS Executive",
         "member3-name": "Aimand Mahmud",
         "member3-position": "BPO Lead",
-        "member4-name": "Ehsan Kabir Abir.",
+        "member4-name": "Ehsan Kabir Abir",
         "member4-position": "Graphic Designer",
         "contact-heading": "Contact Us"
       },
       bn: {
-        "site-title": "MIROBI IT Solutions",
+        "site-title": "MIROB IT Solutions",
         "site-description": "উদ্ভাবনী IT সেবা দিয়ে ব্যবসা শক্তিশালীকরণ",
         "about-heading": "আমাদের সম্পর্কে",
-        "about-description": "আমরা MIROBI IT Solutions, প্রতিষ্ঠিত Md Robiul Islam এবং Mir Abdullah Momin দ্বারা। আমাদের লক্ষ্য হচ্ছে ব্যবসাগুলিকে উদ্ভাবনী এবং সাশ্রয়ী মূল্যের IT সেবার মাধ্যমে সাহায্য করা, যা তাদের দ্রুত প্রবৃদ্ধি এবং কার্যকরী পরিচালনা নিশ্চিত করবে।",
+        "about-description": "MIROBI Solutions হলো একটি গতিশীল আইটি সার্ভিস কোম্পানি, যা প্রতিষ্ঠা করেছেন Md Robiul Islam এবং Mir Abdullah Momin তাদের লক্ষ্য হলো—প্রযুক্তির মাধ্যমে ব্যবসাগুলোকে শক্তিশালী ও উন্নত করা। আমরা ডিজিটাল জগতের বাস্তবতা ও চাহিদাকে ভালোভাবে বুঝি এবং সেই অনুযায়ী ব্যবসা প্রতিষ্ঠানগুলোর জন্য দ্রুত, কার্যকর ও সাশ্রয়ী প্রযুক্তি সেবা প্রদান করি। আমাদের মিশন হচ্ছে—ব্যবসার প্রবৃদ্ধি নিশ্চিত করা, কাজের প্রক্রিয়াকে সহজ করা এবং প্রতিযোগিতামূলক বাজারে প্রতিষ্ঠানগুলোকে সফলভাবে টিকে থাকতে সহায়তা করা।",
         "services-heading": "আমাদের সেবা",
         "web-design-title": "ওয়েব ডিজাইন",
         "web-design-description": "আমরা আধুনিক, প্রতিক্রিয়া-সক্ষম এবং ব্যবহারকারী-বান্ধব ওয়েবসাইট তৈরি করি যা কেবল সুন্দর দেখায় না, তবে ব্যবসায়িক লক্ষ্য অর্জনের জন্য কার্যকরভাবে ডিজাইন করা হয়।",
-        "data-entry-title": "ডেটা এন্ট্রি",
+        "data-entry-title": "ডাটা এন্ট্রি",
         "data-entry-description": "আমাদের সঠিক এবং কার্যকরী ডেটা এন্ট্রি সমাধানগুলি সমস্ত ধরণের শিল্পের সহায়ক, আপনার ব্যবসার তথ্য সর্বদা সুশৃঙ্খল, প্রবেশযোগ্য এবং নিরাপদ রাখে।",
         "bpo-title": "BPO",
         "bpo-description": "আমরা নির্ভরযোগ্য আউটসোর্সিং পরিষেবাগুলি সরবরাহ করি একটি দক্ষ কর্মী বাহিনীর সাথে, যার ফলে আপনি অপারেশনাল খরচ কমাতে পারবেন এবং উচ্চ পরিষেবা মান বজায় রাখবেন।",
@@ -327,7 +396,7 @@
         "member2-position": "MIS এক্সেকিউটিভ",
         "member3-name": "Aiman Mahmud",
         "member3-position": "BPO লিড",
-        "member4-name": "Ehsan Kabir Abir.",
+        "member4-name": "Ehsan Kabir Abir",
         "member4-position": "গ্রাফিক্স ডিজাইনার ",
         "contact-heading": "যোগাযোগ করুন"
       }
