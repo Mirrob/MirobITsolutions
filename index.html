@@ -85,6 +85,24 @@
       animation: fadeIn 1s ease-out;
     }
     body.dark-mode section { background: rgba(52, 152, 219, 0.8); /* Dark theme for sections */ }
+    /* Circle buttons for navigation */
+    nav a {
+      padding: 20px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #333;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      display: inline-block;
+      margin: 10px;
+      transition: background 0.3s ease, color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    nav a:hover {
+      background: #3498db;
+      color: white;
+    }
     .team, .services {
       display: flex;
       flex-wrap: wrap;
