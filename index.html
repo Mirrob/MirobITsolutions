@@ -58,18 +58,22 @@
       z-index: 100;
     }
     nav a {
-      color: #ecf0f1;
+      color: black; /* Font color set to black */
+      font-weight: bold; /* Make font bold */
       text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 1.1rem;
+      margin: 0 15px; /* Reduced space between the links */
+      font-size: 1rem; /* Reduced font size */
       letter-spacing: 1px;
-      transition: color 0.3s ease, transform 0.3s ease;
+      padding: 15px; /* Smaller padding for a smaller circle */
+      border-radius: 50%;
+      background: #ffffff;
+      display: inline-block;
+      transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
     }
     nav a:hover {
-      color: #3498db;
-      transform: scale(1.1);
+      background: #3498db;
+      color: white;
+      transform: scale(1.05); /* Slightly enlarge on hover */
     }
     .container {
       width: 90%;
@@ -85,24 +89,6 @@
       animation: fadeIn 1s ease-out;
     }
     body.dark-mode section { background: rgba(52, 152, 219, 0.8); /* Dark theme for sections */ }
-    /* Circle buttons for navigation */
-    nav a {
-      padding: 20px;
-      border-radius: 50%;
-      background: #ffffff;
-      color: #333;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 1.2rem;
-      display: inline-block;
-      margin: 10px;
-      transition: background 0.3s ease, color 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    nav a:hover {
-      background: #3498db;
-      color: white;
-    }
     .team, .services {
       display: flex;
       flex-wrap: wrap;
